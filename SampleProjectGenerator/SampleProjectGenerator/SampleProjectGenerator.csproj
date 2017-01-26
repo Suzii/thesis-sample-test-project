@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CodeGenerators\ConsoleApp\BaseWebAppClassCodeGenerator.cs" />
+    <Compile Include="CodeGenerators\ConsoleApp\BaseConsoleAppClassCodeGenerator.cs" />
     <Compile Include="CodeGenerators\ConsoleApp\Implementation\LuceneSearchDocument.cs" />
     <Compile Include="CodeGenerators\ConsoleApp\Implementation\SystemIo.cs" />
     <Compile Include="CodeGenerators\ConsoleApp\Implementation\WhereLikeMethod.cs" />

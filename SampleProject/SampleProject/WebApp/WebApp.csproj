@@ -399,7 +399,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SampleClass.cs" />
+    <Compile Include="*.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

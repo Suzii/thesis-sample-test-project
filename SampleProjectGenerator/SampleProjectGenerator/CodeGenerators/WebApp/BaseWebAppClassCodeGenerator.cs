@@ -8,11 +8,10 @@
 
         protected override string GetClassPrefix()
         {
-            return $@"namespace WebApplication1.Controllers
+            return $@"namespace WebApp
 {{
     public class {GetDocumentName()}
-    {{
- ";
+    {{";
         }
 
         protected override string GetClassSuffix()

@@ -22,8 +22,7 @@
             // CMS.EventLog.EventLogProvider.LogEvent(CMS.EventLog.EventType.ERROR, ""source"", ""eventCode"", ""eventDescription"");
             // CMS.EventLog.EventLogProvider.LogEvent(CMS.EventLog.EventType.INFORMATION, ""source"", ""eventCode"", ""eventDescription"");
             // CMS.EventLog.EventLogProvider.LogEvent(CMS.EventLog.EventType.WARNING, ""source"", ""eventCode"", ""eventDescription"");
-        }}
-    }}";
+        }}";
         }
     }
 }

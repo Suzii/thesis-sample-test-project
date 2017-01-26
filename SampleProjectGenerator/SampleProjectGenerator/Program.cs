@@ -1,17 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using SampleProjectGenerator.CodeGenerators;
 
 namespace SampleProjectGenerator
 {
-    class Program
+    internal class Program
     {
-        private const string projectFolder = @"C:\Users\zuzanad\code\thesis\thesis-sample-test-project\";
-
-        static void Main(string[] args)
+        private static IEnumerable<IClassCodeGenerator> GetAllClassCodeGenerators()
         {
-            // get all implementations
             var generatorInterface = typeof(IClassCodeGenerator);
             var codeGenerators = generatorInterface.Assembly
                 .GetTypes()
@@ -19,11 +17,23 @@ namespace SampleProjectGenerator
                 .Select(Activator.CreateInstance)
                 .Cast<IClassCodeGenerator>();
 
-            foreach (var codeGenerator in codeGenerators)
+            return codeGenerators;
+        }
+
+        private static void Main(string[] args)
+        {
+            var sampleProjectFolder = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\..\SampleProject\SampleProject"));
+            var classCodeGenerators = GetAllClassCodeGenerators();
+
+            foreach (var codeGenerator in classCodeGenerators)
             {
-                var documentPath = Path.Combine(projectFolder, RelativeDocumentPaths.GetRelativePath(codeGenerator.ProjectType), codeGenerator.GetDocumentName() + ".cs");
+                var documentPath = Path.Combine(sampleProjectFolder, RelativeDocumentPaths.Get(codeGenerator.ProjectType), codeGenerator.GetDocumentName() + ".cs");
                 File.WriteAllText(documentPath, codeGenerator.Generate(1000));
             }
+
+            Console.WriteLine($"Project files generated to {sampleProjectFolder}");
+            Console.WriteLine("Press any key to continue...");
+            Console.ReadKey();
         }
     }
 }

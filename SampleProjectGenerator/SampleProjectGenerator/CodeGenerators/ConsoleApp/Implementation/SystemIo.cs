@@ -45,7 +45,7 @@
         public void ComplexNestedMemberAccessMethod{iterationNumber}()
         {{
             var directory = new System.IO.DirectoryInfo(System.IO.Path.GetFullPath(""./some/path""));
-            SampleTestProject.CsSamples.{GetDocumentName()}.HelperMethod{iterationNumber}(System.IO.Path.DirectorySeparatorChar);
+            HelperMethod{iterationNumber}(System.IO.Path.DirectorySeparatorChar);
         }}";
         }
     }

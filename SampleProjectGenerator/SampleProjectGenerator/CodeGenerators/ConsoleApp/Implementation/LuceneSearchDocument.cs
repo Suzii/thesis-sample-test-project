@@ -25,7 +25,7 @@ namespace SampleTestProject.CsSamples
             return $@"
         private LuceneSearchDocument Method{iterationNumber}(LuceneSearchDocument doc)
         {{
-            LuceneSearchDocument badVariable = null;
+            LuceneSearchDocument badVariable;
 
             return new LuceneSearchDocument();
         }}";

@@ -14,8 +14,7 @@
             return $@"namespace WebApplication1.Controllers
 {{
     public class {GetDocumentName()} : System.Web.UI.Control
-    {{
- ";
+    {{";
         }
 
         protected override string GetClassBodyToRepeat(int iterationNumber)

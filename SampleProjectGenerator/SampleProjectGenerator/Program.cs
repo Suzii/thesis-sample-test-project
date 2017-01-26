@@ -22,7 +22,7 @@ namespace SampleProjectGenerator
 
         private static void Main(string[] args)
         {
-            var sampleProjectFolder = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\..\SampleProject\SampleProject"));
+            var sampleProjectFolder = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\..\SampleProject"));
             var classCodeGenerators = GetAllClassCodeGenerators();
 
             foreach (var codeGenerator in classCodeGenerators)

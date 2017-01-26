@@ -7,7 +7,7 @@
             return nameof(PageIsPostBack);
         }
 
-        protected override int NumberOfDiagnosticsInBody { get; } = 3;
+        protected override int NumberOfDiagnosticsInBody { get; } = 2;
 
         protected override string GetClassBodyToRepeat(int iterationNumber)
         {

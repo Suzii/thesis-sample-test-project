@@ -7,12 +7,12 @@
             return nameof(StringEqualsMethod);
         }
 
-        protected override int NumberOfDiagnosticsInBody { get; } = 2;
+        protected override int NumberOfDiagnosticsInBody { get; } = 4;
 
         protected override string GetClassBodyToRepeat(int iterationNumber)
         {
             return $@"
-        public string SampleMethod{iterationNumber}()
+        public string SampleMethodInstanceVariant{iterationNumber}()
         {{
             // allowed usages
             // var res1 = ""Original string"".Equals(""a"", StringComparison.InvariantCultureIgnoreCase);
@@ -23,6 +23,18 @@
 
             var original = ""Original string"";
             var result2 = original.Substring(0).Equals(""a"").ToString();
+            
+            return (result1) ? result2 : string.Empty;
+        }}
+
+        public string SampleMethodStaticVariant{iterationNumber}()
+        {{
+            // allowed usages
+            // var res1 = string.Equals(""a"", ""b"", StringComparison.InvariantCultureIgnoreCase);
+            
+            // usages raising diagnostic 
+            var result1 = string.Equals(""a"", ""b"");
+            var result2 = string.Equals(""a"", ""b"").ToString();
             
             return (result1) ? result2 : string.Empty;
         }}";

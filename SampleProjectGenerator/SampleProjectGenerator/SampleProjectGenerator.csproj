@@ -48,7 +48,6 @@
     <Compile Include="CodeGenerators\ConsoleApp\Implementation\StringIndexOfMethod.cs" />
     <Compile Include="CodeGenerators\ConsoleApp\Implementation\StringManipulationMethodsMethod.cs" />
     <Compile Include="CodeGenerators\ConsoleApp\Implementation\StringStartsWithEndsWithMethod.cs" />
-    <Compile Include="CodeGenerators\ConsoleApp\Implementation\StringEqualsStaticMethod.cs" />
     <Compile Include="CodeGenerators\ConsoleApp\Implementation\StringEqualsMethod.cs" />
     <Compile Include="CodeGenerators\ConsoleApp\Implementation\StringCompareToMethod.cs" />
     <Compile Include="CodeGenerators\ConsoleApp\Implementation\StringCompareStaticMethods.cs" />

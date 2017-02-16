@@ -2,9 +2,9 @@
 {
     public class HttpRequestQueryString : BaseWebAppClassCodeGenerator
     {
-        public override string GetDocumentName()
+        public override string GetDocumentName(int index)
         {
-            return nameof(HttpRequestQueryString);
+            return $"{nameof(HttpRequestQueryString)}{index}";
         }
 
         protected override int NumberOfDiagnosticsInBody { get; } = 2;

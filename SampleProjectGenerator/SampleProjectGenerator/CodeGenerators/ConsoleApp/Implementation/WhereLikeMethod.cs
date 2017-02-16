@@ -2,9 +2,9 @@
 {
     public class WhereLikeMethod : BaseConsoleAppClassCodeGenerator
     {
-        public override string GetDocumentName()
+        public override string GetDocumentName(int index)
         {
-            return nameof(WhereLikeMethod);
+            return $"{nameof(WhereLikeMethod)}{index}";
         }
 
         protected override int NumberOfDiagnosticsInBody { get; } = 4;

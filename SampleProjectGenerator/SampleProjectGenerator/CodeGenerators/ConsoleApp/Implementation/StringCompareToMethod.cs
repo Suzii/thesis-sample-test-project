@@ -2,9 +2,9 @@
 {
     public class StringCompareToMethod : BaseConsoleAppClassCodeGenerator
     {
-        public override string GetDocumentName()
+        public override string GetDocumentName(int index)
         {
-            return nameof(StringCompareToMethod);
+            return $"{nameof(StringCompareToMethod)}{index}";
         }
 
         protected override int NumberOfDiagnosticsInBody { get; } = 2;

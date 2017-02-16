@@ -2,9 +2,9 @@
 {
     public class StringStartsWithEndsWithMethod : BaseConsoleAppClassCodeGenerator
     {
-        public override string GetDocumentName()
+        public override string GetDocumentName(int index)
         {
-            return nameof(StringStartsWithEndsWithMethod);
+            return $"{nameof(StringStartsWithEndsWithMethod)}{index}";
         }
 
         protected override int NumberOfDiagnosticsInBody { get; } = 4;

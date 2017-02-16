@@ -2,9 +2,9 @@
 {
     public class HttpResponseRedirect : BaseWebAppClassCodeGenerator
     {
-        public override string GetDocumentName()
+        public override string GetDocumentName(int index)
         {
-            return nameof(HttpResponseRedirect);
+            return $"{nameof(HttpResponseRedirect)}{index}";
         }
 
         protected override int NumberOfDiagnosticsInBody { get; } = 4;

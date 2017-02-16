@@ -2,9 +2,9 @@
 {
     public class PageIsPostBack : BaseWebAppClassCodeGenerator
     {
-        public override string GetDocumentName()
+        public override string GetDocumentName(int index)
         {
-            return nameof(PageIsPostBack);
+            return $"{nameof(PageIsPostBack)}{index}";
         }
 
         protected override int NumberOfDiagnosticsInBody { get; } = 2;

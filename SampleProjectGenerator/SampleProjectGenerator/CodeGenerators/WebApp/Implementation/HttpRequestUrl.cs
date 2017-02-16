@@ -2,9 +2,9 @@
 {
     public class HttpRequestUrl : BaseWebAppClassCodeGenerator
     {
-        public override string GetDocumentName()
+        public override string GetDocumentName(int index)
         {
-            return nameof(HttpRequestUrl);
+            return $"{nameof(HttpRequestUrl)}{index}";
         }
 
         protected override int NumberOfDiagnosticsInBody { get; } = 4;

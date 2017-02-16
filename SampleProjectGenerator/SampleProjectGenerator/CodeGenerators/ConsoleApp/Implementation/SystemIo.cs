@@ -2,9 +2,9 @@
 {
     public class SystemIo : BaseConsoleAppClassCodeGenerator
     {
-        public override string GetDocumentName()
+        public override string GetDocumentName(int index)
         {
-            return nameof(SystemIo);
+            return $"{nameof(SystemIo)}{index}";
         }
 
         protected override int NumberOfDiagnosticsInBody { get; } = 8;

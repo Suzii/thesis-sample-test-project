@@ -2,9 +2,9 @@
 {
     public class EventLogArguments : BaseConsoleAppClassCodeGenerator
     {
-        public override string GetDocumentName()
+        public override string GetDocumentName(int index)
         {
-            return nameof(EventLogArguments);
+            return $"{nameof(EventLogArguments)}{index}";
         }
 
         // TODO 

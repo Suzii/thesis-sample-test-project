@@ -2,9 +2,9 @@
 {
     public class HttpRequestUserHostAddress : BaseWebAppClassCodeGenerator
     {
-        public override string GetDocumentName()
+        public override string GetDocumentName(int index)
         {
-            return nameof(HttpRequestUserHostAddress);
+            return $"{nameof(HttpRequestUserHostAddress)}{index}";
         }
 
         protected override int NumberOfDiagnosticsInBody { get; } = 4;

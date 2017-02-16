@@ -2,9 +2,9 @@
 {
     public class StringIndexOfMethod : BaseConsoleAppClassCodeGenerator
     {
-        public override string GetDocumentName()
+        public override string GetDocumentName(int index)
         {
-            return nameof(StringIndexOfMethod);
+            return $"{nameof(StringIndexOfMethod)}{index}";
         }
 
         protected override int NumberOfDiagnosticsInBody { get; } = 4;

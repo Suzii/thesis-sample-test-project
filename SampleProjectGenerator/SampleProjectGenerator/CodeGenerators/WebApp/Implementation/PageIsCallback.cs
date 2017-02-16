@@ -2,9 +2,9 @@
 {
     public class PageIsCallback : BaseWebAppClassCodeGenerator
     {
-        public override string GetDocumentName()
+        public override string GetDocumentName(int index)
         {
-            return nameof(PageIsCallback);
+            return $"{nameof(PageIsCallback)}{index}";
         }
 
         protected override int NumberOfDiagnosticsInBody { get; } = 2;

@@ -27,8 +27,8 @@ namespace SampleProjectGenerator
 
             foreach (var codeGenerator in classCodeGenerators)
             {
-                var documentPath = Path.Combine(sampleProjectFolder, RelativeDocumentPaths.Get(codeGenerator.ProjectType), codeGenerator.GetDocumentName() + ".cs");
-                File.WriteAllText(documentPath, codeGenerator.Generate(1000));
+                var documentPath = Path.Combine(sampleProjectFolder, RelativeDocumentPaths.Get(codeGenerator.ProjectType), codeGenerator.GetDocumentName(1) + ".cs");
+                File.WriteAllText(documentPath, codeGenerator.GenerateClasses(1000, 1)[0]);
             }
 
             Console.WriteLine($"Project files generated to {sampleProjectFolder}");

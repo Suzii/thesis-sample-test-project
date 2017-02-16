@@ -2,9 +2,9 @@
 {
     public class HttpResponseCookies : BaseWebAppClassCodeGenerator
     {
-        public override string GetDocumentName()
+        public override string GetDocumentName(int index)
         {
-            return nameof(HttpResponseCookies);
+            return $"{nameof(HttpRequestCookies)}{index}";
         }
 
         protected override int NumberOfDiagnosticsInBody { get; } = 6;

@@ -2,9 +2,9 @@
 {
     public class HttpSessionElementAccessGet : BaseWebAppClassCodeGenerator
     {
-        public override string GetDocumentName()
+        public override string GetDocumentName(int index)
         {
-            return nameof(HttpSessionElementAccessGet);
+            return $"{nameof(HttpSessionElementAccessGet)}{index}";
         }
 
         protected override int NumberOfDiagnosticsInBody { get; } = 6;

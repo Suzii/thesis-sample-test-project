@@ -4,8 +4,8 @@
     {
         ProjectType ProjectType { get; }
 
-        string GetDocumentName();
+        string GetDocumentName(int index);
 
-        string Generate(int desiredNumberOfDiagnostics);
+        string[] GenerateClasses(int desiredNumberOfDiagnosticsPerFile, int numberOfFiles);
     }
 }

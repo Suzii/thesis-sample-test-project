@@ -2,9 +2,9 @@
 {
     public class HttpRequestBrowser : BaseWebAppClassCodeGenerator
     {
-        public override string GetDocumentName()
+        public override string GetDocumentName(int index)
         {
-            return nameof(HttpRequestBrowser);
+            return $"{nameof(HttpRequestBrowser)}{index}";
         }
 
         protected override int NumberOfDiagnosticsInBody { get; } = 6;

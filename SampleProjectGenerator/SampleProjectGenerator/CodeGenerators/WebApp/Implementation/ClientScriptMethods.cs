@@ -2,18 +2,18 @@
 {
     public class ClientScriptMethods : BaseWebAppClassCodeGenerator
     {
-        public override string GetDocumentName()
+        public override string GetDocumentName(int index)
         {
-            return nameof(ClientScriptMethods);
+            return $"{nameof(ClientScriptMethods)}{index}";
         }
 
         protected override int NumberOfDiagnosticsInBody { get; } = 8;
 
-        protected override string GetClassPrefix()
+        protected override string GetClassPrefix(int index)
         {
             return $@"namespace WebApplication1.Controllers
 {{
-    public class {GetDocumentName()} : System.Web.UI.Control
+    public class {GetDocumentName(index)} : System.Web.UI.Control
     {{";
         }
 

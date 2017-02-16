@@ -2,20 +2,20 @@
 {
     public class LuceneSearchDocument : BaseConsoleAppClassCodeGenerator
     {
-        public override string GetDocumentName()
+        public override string GetDocumentName(int index)
         {
-            return nameof(LuceneSearchDocument);
+            return $"{nameof(LuceneSearchDocument)}{index}";
         }
 
         protected override int NumberOfDiagnosticsInBody { get; } = 3;
 
-        protected override string GetClassPrefix()
+        protected override string GetClassPrefix(int index)
         {
             return $@"using CMS.Search.Lucene3; 
 
 namespace SampleTestProject.CsSamples
 {{
-    public class {GetDocumentName()}
+    public class {GetDocumentName(index)}
     {{
  ";
         }

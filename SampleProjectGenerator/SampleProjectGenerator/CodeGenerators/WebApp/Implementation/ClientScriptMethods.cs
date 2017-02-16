@@ -11,7 +11,7 @@
 
         protected override string GetClassPrefix(int index)
         {
-            return $@"namespace WebApplication1.Controllers
+            return $@"namespace WebApp.Controllers
 {{
     public class {GetDocumentName(index)} : System.Web.UI.Control
     {{";

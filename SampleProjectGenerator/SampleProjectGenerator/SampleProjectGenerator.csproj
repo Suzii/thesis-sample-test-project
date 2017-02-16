@@ -52,6 +52,7 @@
     <Compile Include="CodeGenerators\ConsoleApp\Implementation\StringCompareToMethod.cs" />
     <Compile Include="CodeGenerators\ConsoleApp\Implementation\StringCompareStaticMethods.cs" />
     <Compile Include="CodeGenerators\ConsoleApp\Implementation\SystemIo.cs" />
+    <Compile Include="CodeGenerators\ConsoleApp\Implementation\ValidationHelperGet.cs" />
     <Compile Include="CodeGenerators\ConsoleApp\Implementation\WhereLikeMethod.cs" />
     <Compile Include="CodeGenerators\WebApp\Implementation\ClientScriptMethods.cs" />
     <Compile Include="CodeGenerators\WebApp\Implementation\HttpSessionElementAccessGet.cs" />

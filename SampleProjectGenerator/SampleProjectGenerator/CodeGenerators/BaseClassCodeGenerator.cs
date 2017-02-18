@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Text;
 
 namespace SampleProjectGenerator.CodeGenerators
@@ -10,24 +9,18 @@ namespace SampleProjectGenerator.CodeGenerators
 
         public abstract string GetDocumentName(int index);
 
-        public string[] GenerateClasses(int desiredNumberOfDiagnosticsPerFile, int numberOfFiles)
+        public string[] GenerateClasses(int desiredNumberOfDiagnostics, int numberOfFiles)
         {
-            var result = new List<string>();
-
-            for (var i = 0; i < numberOfFiles; i++)
-            {
-                result.Add(GenerateSingleClass(desiredNumberOfDiagnosticsPerFile, i));
-            }
-
-            return result.ToArray();
+            var numberOfDiagnosticsPerFile = desiredNumberOfDiagnostics/numberOfFiles;
+            return Enumerable.Range(1, numberOfFiles).Select(index => GenerateSingleClass(numberOfDiagnosticsPerFile, index)).ToArray();
         }
 
-        private string GenerateSingleClass(int desiredNumberOfDiagnosticsPerFile, int i)
+        private string GenerateSingleClass(int desiredNumberOfDiagnosticsPerFile, int index)
         {
             var result = new StringBuilder();
 
-            result.AppendLine(GetClassPrefix(i));
-            var numberOfBodyRepetitions = desiredNumberOfDiagnosticsPerFile / NumberOfDiagnosticsInBody;
+            result.AppendLine(GetClassPrefix(index));
+            var numberOfBodyRepetitions = desiredNumberOfDiagnosticsPerFile/NumberOfDiagnosticsInBody;
 
             Enumerable.Range(1, numberOfBodyRepetitions)
                 .Select(GetClassBodyToRepeat)

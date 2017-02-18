@@ -6,6 +6,6 @@
 
         string GetDocumentName(int index);
 
-        string[] GenerateClasses(int desiredNumberOfDiagnosticsPerFile, int numberOfFiles);
+        string[] GenerateClasses(int desiredNumberOfDiagnostics, int numberOfFiles);
     }
 }

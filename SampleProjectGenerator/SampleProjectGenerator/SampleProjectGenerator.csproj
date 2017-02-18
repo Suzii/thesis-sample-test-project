@@ -43,6 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CodeGenerators\BaseClassRules\BaseForBaseClassesCodeGenerator.cs" />
+    <Compile Include="CodeGenerators\BaseClassRules\Implementation\ModuleRegistration.cs" />
+    <Compile Include="CodeGenerators\BaseClassRules\Implementation\UiWebPartBase.cs" />
+    <Compile Include="CodeGenerators\BaseClassRules\Implementation\WebPartBase.cs" />
+    <Compile Include="CodeGenerators\BaseClassRules\Implementation\UserControlBase.cs" />
+    <Compile Include="CodeGenerators\BaseClassRules\Implementation\PageBase.cs" />
     <Compile Include="CodeGenerators\ConsoleApp\BaseConsoleAppClassCodeGenerator.cs" />
     <Compile Include="CodeGenerators\ConsoleApp\Implementation\LuceneSearchDocument.cs" />
     <Compile Include="CodeGenerators\ConsoleApp\Implementation\StringIndexOfMethod.cs" />
@@ -58,6 +64,7 @@
     <Compile Include="CodeGenerators\WebApp\Implementation\HttpSessionElementAccessGet.cs" />
     <Compile Include="CodeGenerators\WebApp\Implementation\HttpSessionElementAccessSet.cs" />
     <Compile Include="CodeGenerators\WebApp\Implementation\PageIsCallback.cs" />
+    <Compile Include="CodeGenerators\WebApp\Implementation\ValidationHelperGet.cs" />
     <Compile Include="CodeGenerators\WebApp\Implementation\PageIsPostBack.cs" />
     <Compile Include="CodeGenerators\WebApp\Implementation\HttpSessionId.cs" />
     <Compile Include="CodeGenerators\WebApp\Implementation\HttpResponseRedirect.cs" />
@@ -80,6 +87,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

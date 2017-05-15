@@ -560,38 +560,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstractionOverImplementation.cs" />
-    <Compile Include="ClientScriptMethods0.cs" />
+    <Compile Include="ClientScriptMethods.cs" />
     <Compile Include="CmsApiGuidelines.cs" />
     <Compile Include="CmsApiReplacements.cs" />
-    <Compile Include="CMSModules\AdminControls\Controls\UIControls\UiWebPartBase0.cs" />
-    <Compile Include="CMSWebParts\WebPartBase0.cs" />
+    <Compile Include="CMSModules\AdminControls\Controls\UIControls\UiWebPartBase.cs" />
+    <Compile Include="CMSWebParts\ValidationHelperGet.cs" />
+    <Compile Include="CMSWebParts\WebPartBase.cs" />
     <Compile Include="ConnectionHelperExecuteQuery.aspx.cs" />
-    <Compile Include="FormsAuthenticationSignOut0.cs" />
-    <Compile Include="HttpRequestBrowser0.cs" />
-    <Compile Include="HttpRequestCookies0.cs" />
-    <Compile Include="HttpRequestQueryString0.cs" />
-    <Compile Include="HttpRequestUrl0.cs" />
-    <Compile Include="HttpRequestUserHostAddress0.cs" />
-    <Compile Include="HttpResponseCookies0.cs" />
-    <Compile Include="HttpResponseRedirect0.cs" />
-    <Compile Include="HttpSessionElementAccessGet0.cs" />
-    <Compile Include="HttpSessionElementAccessSet0.cs" />
-    <Compile Include="HttpSessionId0.cs" />
-    <Compile Include="Modules\ModuleRegistration0.cs" />
+    <Compile Include="Modules\ModuleRegistration.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
-    <Compile Include="PageIsCallback0.cs" />
-    <Compile Include="PageIsPostBack0.cs" />
     <Compile Include="Pages\PageBase.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\PageBase0.aspx.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StringAndCulture.cs" />
     <Compile Include="SystemIo.cs" />
-    <Compile Include="UserControls\UserControlBase0.ascx.cs" />
-    <Compile Include="CMSWebParts\ValidationHelperGet.cs" />
+    <Compile Include="UserControls\UserControlBase.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

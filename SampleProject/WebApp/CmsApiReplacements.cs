@@ -72,6 +72,7 @@
 
         public void HttpRequestQueryString()
         {
+            // no code fix provided
             var request = new System.Web.HttpRequest("fileName", "url", "queryString");
             var value = request.QueryString["key"].Contains("Ooops...");
         }

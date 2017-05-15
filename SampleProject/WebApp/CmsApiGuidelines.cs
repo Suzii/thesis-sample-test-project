@@ -25,8 +25,6 @@
             // usages raising diagnostic 
             CMS.EventLog.EventLogProvider.LogEvent("I", "source", "eventCode", "eventDescription");
             CMS.EventLog.EventLogProvider.LogEvent("E", "source", "eventCode", "eventDescription");
-            CMS.EventLog.EventLogProvider.LogEvent("E", "source", "eventCode", "eventDescription");
-            CMS.EventLog.EventLogProvider.LogEvent("W", "source", "eventCode", "eventDescription");
             CMS.EventLog.EventLogProvider.LogEvent("W", "source", "eventCode", "eventDescription");
         }
 

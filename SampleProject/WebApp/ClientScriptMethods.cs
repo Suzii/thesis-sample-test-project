@@ -1,5 +1,6 @@
 namespace WebApp
 {
+    // the class must inherit UIControl in order for code fixes to work
     public class ClientScriptMethods : System.Web.UI.Control
     {
         public void SampleMethodA1()

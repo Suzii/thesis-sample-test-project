@@ -5,16 +5,15 @@ namespace WebApp.CMSWebParts
     // file path is important
     public class ValidationHelperGet
     {
-        public void SampleMethodA1()
+        public void GetDouble()
         {
             var a1 = ValidationHelper.GetDouble("", 0);
             var b1 = ValidationHelper.GetDouble("", 0);
-
             var a2 = ValidationHelper.GetDouble("2", 2);
             var a3 = ValidationHelper.GetDouble("", 0, System.Globalization.CultureInfo.CurrentCulture);
         }
 
-        public void SampleMethodB1()
+        public void GetDateTime()
         {
             var a1 = ValidationHelper.GetDateTime("", System.DateTime.MaxValue);
             var b1 = ValidationHelper.GetDateTime("", System.DateTime.MaxValue);
@@ -22,7 +21,7 @@ namespace WebApp.CMSWebParts
             var a3 = ValidationHelper.GetDateTime("", System.DateTime.MaxValue, System.Globalization.CultureInfo.CurrentCulture);
         }
 
-        public void SampleMethodC1()
+        public void GetDate()
         {
             var a1 = ValidationHelper.GetDate("", System.DateTime.MaxValue);
             var a2 = ValidationHelper.GetDate("", System.DateTime.MaxValue, System.Globalization.CultureInfo.CurrentCulture);

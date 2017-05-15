@@ -7,6 +7,7 @@ namespace WebApp
     {
         public void SampleMethod()
         {
+            // no code fix provided
             ConnectionHelper.ExecuteQuery(null);
         }
     }
